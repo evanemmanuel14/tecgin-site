@@ -1,0 +1,9 @@
+{
+  "name": "tecgin-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Tecgin static site + Vercel contact API",
+  "dependencies": {
+    "nodemailer": "^6.9.15"
+  }
+}

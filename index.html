@@ -1,253 +1,241 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tecgin Engineering | Home</title>
-  <meta name="description" content="Tecgin Engineering – modern engineering solutions, projects, and services." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
+<title>Tecgin Engineering | Home</title>
+<meta name="description" content="Tecgin Engineering – modern engineering solutions, projects, and services."/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] } } } }
+</script>
 
-<body>
-  <!-- Top bar -->
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <div class="topbar__left">
-        <span class="badge">Mon – Sat 9AM – 6PM</span>
-        <span class="sep">•</span>
-        <a class="topbar__link" href="tel:+971582857468">+971 58 285 7468</a>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+<div class="w-full border-b border-slate-200 bg-white/70 backdrop-blur">
+  <div class="mx-auto max-w-6xl px-5 py-2 text-sm flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex items-center gap-3 text-slate-600">
+      <span class="inline-flex items-center rounded-full bg-slate-900 text-white px-3 py-1 text-xs font-semibold">Mon–Sat 9AM–6PM</span>
+      <a class="hover:text-slate-900 font-medium" href="tel:+971582857468">+971 58 285 7468</a>
+      <a class="hover:text-slate-900 font-medium" href="https://wa.me/971582857468" target="_blank" rel="noreferrer">WhatsApp</a>
+    </div>
+    <div class="flex items-center gap-3 text-slate-600">
+      <a class="hover:text-slate-900 font-medium" href="mailto:info@tecgin.com">info@tecgin.com</a>
+      <span class="hidden sm:inline">•</span>
+      <span class="hidden sm:inline">Al Warba Centre, Muraqqabat Deira</span>
+    </div>
+  </div>
+</div>
+
+<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+  <div class="mx-auto max-w-6xl px-5 py-4 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/logo.jpg" alt="Tecgin logo" class="h-10 w-10 rounded-xl object-contain border border-slate-200 bg-white"/>
+      <div class="leading-tight">
+        <div class="text-lg font-extrabold tracking-tight">TECGIN</div>
+        <div class="text-xs font-semibold text-slate-500 -mt-0.5">Engineering</div>
       </div>
-      <div class="topbar__right">
-        <a class="topbar__link" href="mailto:info@tecgin.com">info@tecgin.com</a>
-        <span class="sep">•</span>
-        <span class="muted">Al Warba Centre, Muraqqabat Deira</span>
-      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-700" aria-label="Primary">
+      <a class="hover:text-slate-900" href="index.html">Home</a>
+      <a class="hover:text-slate-900" href="about.html">About</a>
+      <a class="hover:text-slate-900" href="services.html">Services</a>
+      <a class="hover:text-slate-900" href="projects.html">Projects</a>
+      <a class="hover:text-slate-900" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="contact.html" class="hidden sm:inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold border border-slate-300 hover:bg-slate-50">Get a quote</a>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl px-3 py-2 border border-slate-300 hover:bg-slate-50" aria-label="Open menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="header" id="siteHeader">
-    <div class="container header__inner">
-      <!-- LOGO: replace assets/logo.jpg with your logo file -->
-      <a class="brand" href="#">
-        <img class="brand__logo" src="assets/logo.jpg" alt="Tecgin logo" />
-        <div class="brand__text">
-          <div class="brand__name">TECGIN</div>
-          <div class="brand__tag">Engineering</div>
+  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-5 py-3 grid gap-2 text-sm font-semibold text-slate-700">
+      <a class="rounded-xl px-3 py-2 hover:bg-slate-50" href="index.html">Home</a>
+      <a class="rounded-xl px-3 py-2 hover:bg-slate-50" href="about.html">About</a>
+      <a class="rounded-xl px-3 py-2 hover:bg-slate-50" href="services.html">Services</a>
+      <a class="rounded-xl px-3 py-2 hover:bg-slate-50" href="projects.html">Projects</a>
+      <a class="rounded-xl px-3 py-2 hover:bg-slate-50" href="contact.html">Contact</a>
+      <a class="rounded-xl px-3 py-2 bg-slate-900 text-white hover:bg-slate-800" href="tel:+971582857468">Call now</a>
+      <a class="rounded-xl px-3 py-2 bg-emerald-600 text-white hover:bg-emerald-700" href="https://wa.me/971582857468" target="_blank" rel="noreferrer">Message on WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+
+<main>
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-slate-200 blur-3xl opacity-70"></div>
+      <div class="absolute top-20 -right-24 h-72 w-72 rounded-full bg-indigo-200 blur-3xl opacity-60"></div>
+      <div class="absolute bottom-0 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-emerald-200 blur-3xl opacity-50"></div>
+    </div>
+
+    <div class="mx-auto max-w-6xl px-5 py-14 md:py-20 grid gap-10 md:grid-cols-2 md:items-center">
+      <div>
+        <p class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-extrabold tracking-wide text-slate-700 border border-slate-200">
+          <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+          Modern Engineering & Technical Solutions
+        </p>
+
+        <h1 class="mt-5 text-4xl md:text-5xl font-extrabold tracking-tight">
+          Build smarter. Automate faster.<br class="hidden sm:block"/> Deliver stronger.
+        </h1>
+
+        <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+          Tecgin Engineering provides practical, modern solutions across industrial, commercial, and automation projects.
+        </p>
+
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="services.html" class="rounded-xl bg-slate-900 text-white px-5 py-3 font-semibold hover:bg-slate-800">Explore Services</a>
+          <a href="projects.html" class="rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">View Projects</a>
+          <a href="tel:+971582857468" class="rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">Call</a>
+          <a href="https://wa.me/971582857468" target="_blank" rel="noreferrer" class="rounded-xl bg-emerald-600 text-white px-5 py-3 font-semibold hover:bg-emerald-700">WhatsApp</a>
         </div>
-      </a>
 
-      <nav class="nav" id="siteNav" aria-label="Primary navigation">
-        <a href="#home" class="nav__link">Home</a>
-        <a href="#about" class="nav__link">About</a>
-        <a href="#services" class="nav__link">Services</a>
-        <a href="#projects" class="nav__link">Projects</a>
-        <a href="#contact" class="nav__link">Contact</a>
-      </nav>
+        <div class="mt-8 grid grid-cols-3 gap-3">
+          <div class="rounded-2xl bg-white border border-slate-200 p-4">
+            <div class="text-sm font-extrabold">Fast</div><div class="text-xs text-slate-500 font-semibold mt-1">Turnaround</div>
+          </div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-4">
+            <div class="text-sm font-extrabold">Modern</div><div class="text-xs text-slate-500 font-semibold mt-1">Delivery</div>
+          </div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-4">
+            <div class="text-sm font-extrabold">Reliable</div><div class="text-xs text-slate-500 font-semibold mt-1">Support</div>
+          </div>
+        </div>
+      </div>
 
-      <div class="header__actions">
-        <a class="btn btn--ghost" href="#contact">Contact Now</a>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+      <div class="rounded-3xl bg-white border border-slate-200 shadow-sm p-6 md:p-8">
+        <div class="flex items-start justify-between gap-3">
+          <div>
+            <h2 class="text-2xl font-extrabold">Request a Quote</h2>
+            <p class="mt-1 text-sm text-slate-600">Sends straight to your email (via Vercel).</p>
+          </div>
+          <span class="text-xs font-extrabold text-slate-700 bg-slate-100 rounded-full px-3 py-1">1–2 mins</span>
+        </div>
+
+        <form id="quoteForm" class="mt-6 grid gap-4">
+          <div class="grid gap-2">
+            <label class="text-sm font-semibold text-slate-700">Name</label>
+            <input name="name" required class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="Your name"/>
+          </div>
+          <div class="grid gap-2">
+            <label class="text-sm font-semibold text-slate-700">Email</label>
+            <input name="email" type="email" required class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="you@email.com"/>
+          </div>
+          <div class="grid gap-2">
+            <label class="text-sm font-semibold text-slate-700">Phone (optional)</label>
+            <input name="phone" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="+971 …"/>
+          </div>
+          <div class="grid gap-2">
+            <label class="text-sm font-semibold text-slate-700">What do you need?</label>
+            <textarea name="message" rows="4" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="Automation / engineering / integration…"></textarea>
+          </div>
+
+          <button class="rounded-xl bg-slate-900 text-white font-semibold px-4 py-3 hover:bg-slate-800" type="submit">Send request</button>
+          <p id="quoteStatus" class="text-sm font-semibold" aria-live="polite"></p>
+          <p class="text-xs text-slate-500">Needs Vercel env vars for SMTP (explained in README below).</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-14">
+    <div class="flex items-end justify-between gap-4 flex-wrap">
+      <div>
+        <h2 class="text-3xl font-extrabold tracking-tight">Services</h2>
+        <p class="mt-2 text-slate-600">A clean set of services you can edit anytime.</p>
+      </div>
+      <a href="services.html" class="text-sm font-extrabold hover:text-slate-700">See all →</a>
+    </div>
+
+    <div class="mt-8 grid gap-4 md:grid-cols-3">
+      <article class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-sm transition">
+        <h3 class="text-lg font-extrabold">Industrial Engineering</h3>
+        <p class="mt-2 text-sm text-slate-600">Process improvement, equipment support, reliability upgrades.</p>
+      </article>
+      <article class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-sm transition">
+        <h3 class="text-lg font-extrabold">Automation & Controls</h3>
+        <p class="mt-2 text-sm text-slate-600">Sensors, dashboards, monitoring, alerting, workflows.</p>
+      </article>
+      <article class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-sm transition">
+        <h3 class="text-lg font-extrabold">System Integration</h3>
+        <p class="mt-2 text-sm text-slate-600">Connect tools, data, devices, and reporting into one flow.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 pb-16">
+    <div class="rounded-3xl bg-slate-900 text-white p-8 md:p-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div>
+        <h2 class="text-3xl font-extrabold">Ready to build something modern?</h2>
+        <p class="mt-2 text-slate-200">Call, WhatsApp, or send a message — we’ll respond quickly.</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a href="contact.html" class="rounded-xl bg-white text-slate-900 px-5 py-3 font-semibold hover:bg-slate-100">Contact</a>
+        <a href="tel:+971582857468" class="rounded-xl border border-white/30 px-5 py-3 font-semibold hover:bg-white/10">Call</a>
+        <a href="https://wa.me/971582857468" target="_blank" rel="noreferrer" class="rounded-xl bg-emerald-500 px-5 py-3 font-semibold hover:bg-emerald-600">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="border-t border-slate-200 bg-white">
+  <div class="mx-auto max-w-6xl px-5 py-10 grid gap-8 md:grid-cols-3">
+    <div>
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.jpg" alt="Tecgin logo" class="h-10 w-10 rounded-xl object-contain border border-slate-200 bg-white"/>
+        <div>
+          <div class="font-extrabold">TECGIN</div>
+          <div class="text-xs text-slate-500 font-semibold">Engineering</div>
+        </div>
+      </div>
+      <p class="mt-4 text-sm text-slate-600">Modern engineering & technical solutions — practical delivery, clean execution, reliable support.</p>
+      <div class="mt-4 flex gap-3 text-sm font-semibold">
+        <a class="hover:text-slate-900 text-slate-700" href="mailto:info@tecgin.com">Email</a>
+        <a class="hover:text-slate-900 text-slate-700" href="tel:+971582857468">Call</a>
+        <a class="hover:text-slate-900 text-slate-700" href="https://wa.me/971582857468" target="_blank" rel="noreferrer">WhatsApp</a>
       </div>
     </div>
 
-    <!-- Mobile menu -->
-    <div class="mobileMenu" id="mobileMenu">
-      <div class="container mobileMenu__inner">
-        <a href="#home" class="mobileMenu__link">Home</a>
-        <a href="#about" class="mobileMenu__link">About</a>
-        <a href="#services" class="mobileMenu__link">Services</a>
-        <a href="#projects" class="mobileMenu__link">Projects</a>
-        <a href="#contact" class="mobileMenu__link">Contact</a>
+    <div class="text-sm">
+      <div class="font-extrabold">Quick links</div>
+      <div class="mt-3 grid gap-2 text-slate-700 font-semibold">
+        <a class="hover:text-slate-900" href="about.html">About</a>
+        <a class="hover:text-slate-900" href="services.html">Services</a>
+        <a class="hover:text-slate-900" href="projects.html">Projects</a>
+        <a class="hover:text-slate-900" href="contact.html">Contact</a>
       </div>
     </div>
-  </header>
 
-  <!-- Hero -->
-  <main id="home">
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <p class="kicker">Modern Engineering & Technical Solutions</p>
-          <h1>Build smarter. Automate faster. Deliver stronger.</h1>
-          <p class="lead">
-            Tecgin Engineering provides practical, modern solutions across industrial, commercial, and automation projects —
-            with an engineering-first mindset and clean execution.
-          </p>
+    <div class="text-sm">
+      <div class="font-extrabold">Location</div>
+      <p class="mt-3 text-slate-600">Al Warba Centre, Muraqqabat Deira<br/>Dubai, UAE</p>
+      <p class="mt-3 text-slate-600">Working hours: Mon–Sat 9AM–6PM</p>
+    </div>
+  </div>
 
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="#services">Explore Services</a>
-            <a class="btn btn--ghost" href="#projects">View Projects</a>
-          </div>
+  <div class="border-t border-slate-200">
+    <div class="mx-auto max-w-6xl px-5 py-4 text-xs text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <span>© <span id="year"></span> Tecgin. All rights reserved.</span>
+      <span class="text-slate-400">Built on GitHub + Vercel</span>
+    </div>
+  </div>
+</footer>
 
-          <div class="hero__stats">
-            <div class="stat">
-              <div class="stat__num">Fast</div>
-              <div class="stat__label">Turnaround</div>
-            </div>
-            <div class="stat">
-              <div class="stat__num">Modern</div>
-              <div class="stat__label">Design & Delivery</div>
-            </div>
-            <div class="stat">
-              <div class="stat__num">Reliable</div>
-              <div class="stat__label">Support</div>
-            </div>
-          </div>
-        </div>
+<script src="script.js"></script>
 
-        <div class="hero__card">
-          <div class="card">
-            <h3>Request a Quote</h3>
-            <p class="muted">Tell us what you’re building. We’ll reply quickly.</p>
-
-            <form class="form" onsubmit="return handleQuote(event)">
-              <label>
-                <span>Name</span>
-                <input required name="name" type="text" placeholder="Your name" />
-              </label>
-              <label>
-                <span>Email</span>
-                <input required name="email" type="email" placeholder="you@email.com" />
-              </label>
-              <label>
-                <span>Project</span>
-                <input name="project" type="text" placeholder="Automation / Engineering / Design…" />
-              </label>
-              <button class="btn btn--primary btn--full" type="submit">Send</button>
-              <p class="tiny muted">This demo form shows a success message (no backend yet).</p>
-              <p class="tiny success" id="quoteSuccess" hidden>✅ Thanks! We’ll contact you soon.</p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section" id="about">
-      <div class="container grid2">
-        <div>
-          <h2>About Tecgin</h2>
-          <p class="lead">
-            We combine engineering thinking with modern technology to create solutions that work in real environments.
-          </p>
-          <p>
-            From industrial improvements to smart automation and system integration, we focus on clear outcomes, clean design,
-            and reliable delivery.
-          </p>
-
-          <div class="bullets">
-            <div class="bullet">✔ Practical engineering solutions</div>
-            <div class="bullet">✔ Automation & integration focus</div>
-            <div class="bullet">✔ Clean modern user experience</div>
-          </div>
-        </div>
-
-        <div class="panel">
-          <h3>Core capabilities</h3>
-          <div class="tags">
-            <span class="tag">Industrial</span>
-            <span class="tag">Commercial</span>
-            <span class="tag">Automation</span>
-            <span class="tag">Integration</span>
-            <span class="tag">Design</span>
-            <span class="tag">Support</span>
-          </div>
-          <div class="divider"></div>
-          <p class="muted">
-            Want this editable like WordPress? We can connect this website to a CMS so you can edit text/images without touching code.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section class="section section--alt" id="services">
-      <div class="container">
-        <div class="section__head">
-          <h2>Services</h2>
-          <p class="muted">A modern layout you can reuse for your 5 pages.</p>
-        </div>
-
-        <div class="cards3">
-          <article class="card card--service">
-            <h3>Industrial Engineering</h3>
-            <p class="muted">Process improvement, equipment support, reliability upgrades.</p>
-            <a class="link" href="#contact">Learn more →</a>
-          </article>
-
-          <article class="card card--service">
-            <h3>Automation & Controls</h3>
-            <p class="muted">Sensors, dashboards, workflows, monitoring, and alerts.</p>
-            <a class="link" href="#contact">Learn more →</a>
-          </article>
-
-          <article class="card card--service">
-            <h3>System Integration</h3>
-            <p class="muted">Connect tools, data, devices, and reporting in one flow.</p>
-            <a class="link" href="#contact">Learn more →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section__head">
-          <h2>Featured Projects</h2>
-          <p class="muted">Replace these with your real projects later.</p>
-        </div>
-
-        <div class="projects">
-          <article class="project">
-            <div class="project__thumb"></div>
-            <div class="project__body">
-              <h3>Factory Monitoring Upgrade</h3>
-              <p class="muted">Real-time reporting + alerting for critical operations.</p>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project__thumb"></div>
-            <div class="project__body">
-              <h3>Commercial System Integration</h3>
-              <p class="muted">Unified data + workflows for smoother operations.</p>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project__thumb"></div>
-            <div class="project__body">
-              <h3>Automation Dashboard</h3>
-              <p class="muted">Modern UI dashboard accessible anywhere.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-      <div class="container cta__inner">
-        <div>
-          <h2>Ready to build something modern?</h2>
-          <p class="muted">We can keep this as a fast custom site, or connect a CMS so you edit easily.</p>
-        </div>
-        <a class="btn btn--primary" href="#contact">Contact Tecgin</a>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section section--alt" id="contact">
-      <div class="container grid2">
-        <div>
-          <h2>Contact</h2>
-          <p class="lead">Tell us what you need — we’ll reply quickly.</p>
-          <div class="contactList">
-            <div><span class="muted">Email:</span> <a class="link" href="mailto
+</body>
+</html>
