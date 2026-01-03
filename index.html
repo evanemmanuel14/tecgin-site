@@ -1,241 +1,430 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Tecgin Engineering | Home</title>
-<meta name="description" content="Tecgin Engineering – modern engineering solutions, projects, and services."/>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] } } } }
-</script>
-
+  <title>Tecgin — Engineering, AI & Robotics</title>
+  <meta name="description" content="Tecgin builds modern engineering systems with automation, AI and robotics—designed for reliability, speed and safety."/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/site.css">
 </head>
-<body class="bg-slate-50 text-slate-900">
 
-<div class="w-full border-b border-slate-200 bg-white/70 backdrop-blur">
+<body class="tg-bg text-slate-100">
+  <div class="tg-orb" aria-hidden="true"></div>
+  <div class="w-full border-b border-white/10 bg-slate-950/40 backdrop-blur">
   <div class="mx-auto max-w-6xl px-5 py-2 text-sm flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-    <div class="flex items-center gap-3 text-slate-600">
-      <span class="inline-flex items-center rounded-full bg-slate-900 text-white px-3 py-1 text-xs font-semibold">Mon–Sat 9AM–6PM</span>
-      <a class="hover:text-slate-900 font-medium" href="tel:+971582857468">+971 58 285 7468</a>
-      <a class="hover:text-slate-900 font-medium" href="https://wa.me/971582857468" target="_blank" rel="noreferrer">WhatsApp</a>
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-slate-300">
+      <span class="inline-flex items-center rounded-full bg-white/10 border border-white/10 px-3 py-1 text-xs font-semibold">Mon–Sat 9AM–6PM</span>
+      <a class="hover:text-white font-medium" href="tel:+971582857468">+971 58 285 7468</a>
+      <a class="hover:text-white font-medium" href="https://wa.me/971582857468" target="_blank" rel="noreferrer">WhatsApp</a>
     </div>
-    <div class="flex items-center gap-3 text-slate-600">
-      <a class="hover:text-slate-900 font-medium" href="mailto:info@tecgin.com">info@tecgin.com</a>
+    <div class="flex items-center gap-3 text-slate-300">
+      <a class="hover:text-white font-medium" href="mailto:info@tecgin.com">info@tecgin.com</a>
       <span class="hidden sm:inline">•</span>
       <span class="hidden sm:inline">Al Warba Centre, Muraqqabat Deira</span>
     </div>
   </div>
 </div>
-
-<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/55 backdrop-blur">
   <div class="mx-auto max-w-6xl px-5 py-4 flex items-center justify-between gap-4">
     <a href="index.html" class="flex items-center gap-3">
-      <img src="assets/logo.jpg" alt="Tecgin logo" class="h-10 w-10 rounded-xl object-contain border border-slate-200 bg-white"/>
+      <img src="assets/logo.jpg" alt="Tecgin logo" class="h-10 w-10 rounded-xl object-cover tg-glow">
       <div class="leading-tight">
-        <div class="text-lg font-extrabold tracking-tight">TECGIN</div>
-        <div class="text-xs font-semibold text-slate-500 -mt-0.5">Engineering</div>
+        <div class="text-white font-extrabold tracking-tight">TECGIN</div>
+        <div class="text-slate-300 text-xs">Engineering • AI • Robotics</div>
       </div>
     </a>
 
-    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-700" aria-label="Primary">
-      <a class="hover:text-slate-900" href="index.html">Home</a>
-      <a class="hover:text-slate-900" href="about.html">About</a>
-      <a class="hover:text-slate-900" href="services.html">Services</a>
-      <a class="hover:text-slate-900" href="projects.html">Projects</a>
-      <a class="hover:text-slate-900" href="contact.html">Contact</a>
+    <nav class="hidden md:flex items-center gap-7 text-sm text-slate-200">
+      <a class="hover:text-white" href="services.html">Services</a>
+      <a class="hover:text-white" href="projects.html">Projects</a>
+      <a class="hover:text-white" href="about.html">About</a>
+      <a class="hover:text-white" href="contact.html">Contact</a>
+      <a class="tg-btn inline-flex items-center rounded-xl bg-white text-slate-900 px-4 py-2 font-semibold" href="contact.html">Request a Quote</a>
     </nav>
 
-    <div class="flex items-center gap-2">
-      <a href="contact.html" class="hidden sm:inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold border border-slate-300 hover:bg-slate-50">Get a quote</a>
-      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl px-3 py-2 border border-slate-300 hover:bg-slate-50" aria-label="Open menu" aria-expanded="false">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
+    <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-slate-200"
+      aria-label="Open menu" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="opacity-90">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
   </div>
 
-  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
-    <div class="mx-auto max-w-6xl px-5 py-3 grid gap-2 text-sm font-semibold text-slate-700">
-      <a class="rounded-xl px-3 py-2 hover:bg-slate-50" href="index.html">Home</a>
-      <a class="rounded-xl px-3 py-2 hover:bg-slate-50" href="about.html">About</a>
-      <a class="rounded-xl px-3 py-2 hover:bg-slate-50" href="services.html">Services</a>
-      <a class="rounded-xl px-3 py-2 hover:bg-slate-50" href="projects.html">Projects</a>
-      <a class="rounded-xl px-3 py-2 hover:bg-slate-50" href="contact.html">Contact</a>
-      <a class="rounded-xl px-3 py-2 bg-slate-900 text-white hover:bg-slate-800" href="tel:+971582857468">Call now</a>
-      <a class="rounded-xl px-3 py-2 bg-emerald-600 text-white hover:bg-emerald-700" href="https://wa.me/971582857468" target="_blank" rel="noreferrer">Message on WhatsApp</a>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 bg-slate-950/70">
+    <div class="mx-auto max-w-6xl px-5 py-4 flex flex-col gap-3 text-slate-200">
+      <a class="hover:text-white" href="services.html">Services</a>
+      <a class="hover:text-white" href="projects.html">Projects</a>
+      <a class="hover:text-white" href="about.html">About</a>
+      <a class="hover:text-white" href="contact.html">Contact</a>
+      <div class="pt-2">
+        <a class="inline-flex items-center justify-center w-full rounded-xl bg-white text-slate-900 px-4 py-2 font-semibold" href="contact.html">Request a Quote</a>
+      </div>
     </div>
   </div>
 </header>
 
-
-<main>
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 -z-10">
-      <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-slate-200 blur-3xl opacity-70"></div>
-      <div class="absolute top-20 -right-24 h-72 w-72 rounded-full bg-indigo-200 blur-3xl opacity-60"></div>
-      <div class="absolute bottom-0 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-emerald-200 blur-3xl opacity-50"></div>
-    </div>
-
-    <div class="mx-auto max-w-6xl px-5 py-14 md:py-20 grid gap-10 md:grid-cols-2 md:items-center">
-      <div>
-        <p class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-extrabold tracking-wide text-slate-700 border border-slate-200">
-          <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
-          Modern Engineering & Technical Solutions
-        </p>
-
-        <h1 class="mt-5 text-4xl md:text-5xl font-extrabold tracking-tight">
-          Build smarter. Automate faster.<br class="hidden sm:block"/> Deliver stronger.
-        </h1>
-
-        <p class="mt-5 text-lg text-slate-600 leading-relaxed">
-          Tecgin Engineering provides practical, modern solutions across industrial, commercial, and automation projects.
-        </p>
-
-        <div class="mt-7 flex flex-wrap gap-3">
-          <a href="services.html" class="rounded-xl bg-slate-900 text-white px-5 py-3 font-semibold hover:bg-slate-800">Explore Services</a>
-          <a href="projects.html" class="rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">View Projects</a>
-          <a href="tel:+971582857468" class="rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">Call</a>
-          <a href="https://wa.me/971582857468" target="_blank" rel="noreferrer" class="rounded-xl bg-emerald-600 text-white px-5 py-3 font-semibold hover:bg-emerald-700">WhatsApp</a>
-        </div>
-
-        <div class="mt-8 grid grid-cols-3 gap-3">
-          <div class="rounded-2xl bg-white border border-slate-200 p-4">
-            <div class="text-sm font-extrabold">Fast</div><div class="text-xs text-slate-500 font-semibold mt-1">Turnaround</div>
-          </div>
-          <div class="rounded-2xl bg-white border border-slate-200 p-4">
-            <div class="text-sm font-extrabold">Modern</div><div class="text-xs text-slate-500 font-semibold mt-1">Delivery</div>
-          </div>
-          <div class="rounded-2xl bg-white border border-slate-200 p-4">
-            <div class="text-sm font-extrabold">Reliable</div><div class="text-xs text-slate-500 font-semibold mt-1">Support</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="rounded-3xl bg-white border border-slate-200 shadow-sm p-6 md:p-8">
-        <div class="flex items-start justify-between gap-3">
+  <main>
+    <!-- Hero -->
+    <section class="relative">
+      <div class="mx-auto max-w-6xl px-5 pt-14 pb-10 md:pt-20 md:pb-16">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
-            <h2 class="text-2xl font-extrabold">Request a Quote</h2>
-            <p class="mt-1 text-sm text-slate-600">Sends straight to your email (via Vercel).</p>
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200">
+              <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+              Building production-ready engineering systems
+            </div>
+            <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.05]">
+              Engineering that feels <span class="tg-underline">next‑gen</span>.
+              <br class="hidden sm:block"/>
+              AI. Automation. Robotics.
+            </h1>
+            <p class="mt-5 text-slate-300 text-lg max-w-xl">
+              We design, integrate, and deploy modern solutions—from control systems and automation to AI vision and robotics—
+              so your operations run faster, safer, and smarter.
+            </p>
+
+            <div class="mt-7 flex flex-col sm:flex-row gap-3">
+              <a href="contact.html" class="tg-btn inline-flex items-center justify-center rounded-xl bg-white text-slate-900 px-5 py-3 font-semibold">
+                Request a Quote
+              </a>
+              <a href="https://wa.me/971582857468" target="_blank" rel="noreferrer"
+                 class="tg-btn inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 font-semibold">
+                WhatsApp us
+              </a>
+              <a href="services.html" class="inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold text-slate-200 hover:text-white">
+                Explore services →
+              </a>
+            </div>
+
+            <div class="mt-8 grid grid-cols-3 gap-3 max-w-xl">
+              <div class="tg-kpi rounded-2xl p-4">
+                <div class="text-2xl font-extrabold" data-count="25" data-suffix="+">0</div>
+                <div class="text-xs text-slate-300 mt-1">Deployments & pilots</div>
+              </div>
+              <div class="tg-kpi rounded-2xl p-4">
+                <div class="text-2xl font-extrabold" data-count="12" data-suffix="x">0</div>
+                <div class="text-xs text-slate-300 mt-1">Faster reporting</div>
+              </div>
+              <div class="tg-kpi rounded-2xl p-4">
+                <div class="text-2xl font-extrabold" data-count="99" data-suffix="%">0</div>
+                <div class="text-xs text-slate-300 mt-1">Uptime targets</div>
+              </div>
+            </div>
           </div>
-          <span class="text-xs font-extrabold text-slate-700 bg-slate-100 rounded-full px-3 py-1">1–2 mins</span>
+
+          <!-- Visual card -->
+          <div class="relative">
+            <div class="tg-card tg-glow rounded-3xl p-6 md:p-8">
+              <div class="flex items-start justify-between gap-6">
+                <div>
+                  <div class="text-white font-semibold">Smart Factory Blueprint</div>
+                  <div class="text-slate-300 text-sm mt-1">AI vision + robotics + controls</div>
+                </div>
+                <span class="inline-flex items-center rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/20 px-3 py-1 text-xs font-semibold">
+                  Live-ready
+                </span>
+              </div>
+
+              <div class="mt-6 grid gap-4">
+                <div class="tg-card rounded-2xl p-4">
+                  <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 12h16M12 4v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-white">Automation & Controls</div>
+                      <div class="text-sm text-slate-300">PLC/HMI, SCADA, sensors, safety</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tg-card rounded-2xl p-4">
+                  <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M8 7h8M9 11h6M10 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M6 21V3h12v18l-6-3-6 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-white">AI Vision & Analytics</div>
+                      <div class="text-sm text-slate-300">Inspection, counting, anomaly detection</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tg-card rounded-2xl p-4">
+                  <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M7 12a5 5 0 1 1 10 0v5a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-5Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M9 10V8a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-white">Robotics Integration</div>
+                      <div class="text-sm text-slate-300">Pick & place, palletizing, cobots</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span class="tg-chip rounded-full px-3 py-1 text-xs text-slate-200">Design</span>
+                <span class="tg-chip rounded-full px-3 py-1 text-xs text-slate-200">Integrate</span>
+                <span class="tg-chip rounded-full px-3 py-1 text-xs text-slate-200">Deploy</span>
+                <span class="tg-chip rounded-full px-3 py-1 text-xs text-slate-200">Support</span>
+              </div>
+            </div>
+
+            <div class="mt-4 text-xs text-slate-400">
+              Want a similar layout? You can edit everything in plain HTML — no heavy CMS.
+            </div>
+          </div>
         </div>
-
-        <form id="quoteForm" class="mt-6 grid gap-4">
-          <div class="grid gap-2">
-            <label class="text-sm font-semibold text-slate-700">Name</label>
-            <input name="name" required class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="Your name"/>
-          </div>
-          <div class="grid gap-2">
-            <label class="text-sm font-semibold text-slate-700">Email</label>
-            <input name="email" type="email" required class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="you@email.com"/>
-          </div>
-          <div class="grid gap-2">
-            <label class="text-sm font-semibold text-slate-700">Phone (optional)</label>
-            <input name="phone" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="+971 …"/>
-          </div>
-          <div class="grid gap-2">
-            <label class="text-sm font-semibold text-slate-700">What do you need?</label>
-            <textarea name="message" rows="4" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="Automation / engineering / integration…"></textarea>
-          </div>
-
-          <button class="rounded-xl bg-slate-900 text-white font-semibold px-4 py-3 hover:bg-slate-800" type="submit">Send request</button>
-          <p id="quoteStatus" class="text-sm font-semibold" aria-live="polite"></p>
-          <p class="text-xs text-slate-500">Needs Vercel env vars for SMTP (explained in README below).</p>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="mx-auto max-w-6xl px-5 py-14">
-    <div class="flex items-end justify-between gap-4 flex-wrap">
-      <div>
-        <h2 class="text-3xl font-extrabold tracking-tight">Services</h2>
-        <p class="mt-2 text-slate-600">A clean set of services you can edit anytime.</p>
-      </div>
-      <a href="services.html" class="text-sm font-extrabold hover:text-slate-700">See all →</a>
-    </div>
-
-    <div class="mt-8 grid gap-4 md:grid-cols-3">
-      <article class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-sm transition">
-        <h3 class="text-lg font-extrabold">Industrial Engineering</h3>
-        <p class="mt-2 text-sm text-slate-600">Process improvement, equipment support, reliability upgrades.</p>
-      </article>
-      <article class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-sm transition">
-        <h3 class="text-lg font-extrabold">Automation & Controls</h3>
-        <p class="mt-2 text-sm text-slate-600">Sensors, dashboards, monitoring, alerting, workflows.</p>
-      </article>
-      <article class="rounded-3xl bg-white border border-slate-200 p-6 hover:shadow-sm transition">
-        <h3 class="text-lg font-extrabold">System Integration</h3>
-        <p class="mt-2 text-sm text-slate-600">Connect tools, data, devices, and reporting into one flow.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="mx-auto max-w-6xl px-5 pb-16">
-    <div class="rounded-3xl bg-slate-900 text-white p-8 md:p-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-      <div>
-        <h2 class="text-3xl font-extrabold">Ready to build something modern?</h2>
-        <p class="mt-2 text-slate-200">Call, WhatsApp, or send a message — we’ll respond quickly.</p>
-      </div>
-      <div class="flex flex-wrap gap-3">
-        <a href="contact.html" class="rounded-xl bg-white text-slate-900 px-5 py-3 font-semibold hover:bg-slate-100">Contact</a>
-        <a href="tel:+971582857468" class="rounded-xl border border-white/30 px-5 py-3 font-semibold hover:bg-white/10">Call</a>
-        <a href="https://wa.me/971582857468" target="_blank" rel="noreferrer" class="rounded-xl bg-emerald-500 px-5 py-3 font-semibold hover:bg-emerald-600">WhatsApp</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-
-<footer class="border-t border-slate-200 bg-white">
-  <div class="mx-auto max-w-6xl px-5 py-10 grid gap-8 md:grid-cols-3">
-    <div>
-      <div class="flex items-center gap-3">
-        <img src="assets/logo.jpg" alt="Tecgin logo" class="h-10 w-10 rounded-xl object-contain border border-slate-200 bg-white"/>
+    <!-- Capabilities -->
+    <section class="mx-auto max-w-6xl px-5 pb-16">
+      <div class="flex items-end justify-between gap-6">
         <div>
-          <div class="font-extrabold">TECGIN</div>
-          <div class="text-xs text-slate-500 font-semibold">Engineering</div>
+          <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Capabilities</h2>
+          <p class="mt-2 text-slate-300 max-w-2xl">Choose a single service—or combine them into a full solution.</p>
+        </div>
+        <a href="services.html" class="hidden sm:inline-flex text-slate-200 hover:text-white font-semibold">View all →</a>
+      </div>
+
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        
+        <a href="services.html" class="tg-card rounded-3xl p-6 tg-glow">
+          <div class="text-white font-semibold">AI Vision Systems</div>
+          <p class="mt-2 text-sm text-slate-300">Quality inspection, object detection, counting, and anomaly alerts.</p>
+          <div class="mt-4 text-sm font-semibold text-slate-200">Learn more →</div>
+        </a>
+        
+        <a href="services.html" class="tg-card rounded-3xl p-6 tg-glow">
+          <div class="text-white font-semibold">Robotics & Cobots</div>
+          <p class="mt-2 text-sm text-slate-300">End‑of‑line automation, pick & place, palletizing, safety integration.</p>
+          <div class="mt-4 text-sm font-semibold text-slate-200">Learn more →</div>
+        </a>
+        
+        <a href="services.html" class="tg-card rounded-3xl p-6 tg-glow">
+          <div class="text-white font-semibold">Automation & Controls</div>
+          <p class="mt-2 text-sm text-slate-300">PLC/HMI, SCADA, sensors, drives, and interlocks.</p>
+          <div class="mt-4 text-sm font-semibold text-slate-200">Learn more →</div>
+        </a>
+        
+        <a href="services.html" class="tg-card rounded-3xl p-6 tg-glow">
+          <div class="text-white font-semibold">System Integration</div>
+          <p class="mt-2 text-sm text-slate-300">Connect machines, data, dashboards, and workflows—end to end.</p>
+          <div class="mt-4 text-sm font-semibold text-slate-200">Learn more →</div>
+        </a>
+        
+        <a href="services.html" class="tg-card rounded-3xl p-6 tg-glow">
+          <div class="text-white font-semibold">Digital Signage & AV</div>
+          <p class="mt-2 text-sm text-slate-300">Commercial displays, content scheduling, meeting rooms, installations.</p>
+          <div class="mt-4 text-sm font-semibold text-slate-200">Learn more →</div>
+        </a>
+        
+        <a href="services.html" class="tg-card rounded-3xl p-6 tg-glow">
+          <div class="text-white font-semibold">IoT Monitoring</div>
+          <p class="mt-2 text-sm text-slate-300">Remote telemetry, alerts, and maintenance signals in real time.</p>
+          <div class="mt-4 text-sm font-semibold text-slate-200">Learn more →</div>
+        </a>
+        
+      </div>
+    </section>
+
+    <!-- How we work -->
+    <section class="mx-auto max-w-6xl px-5 pb-16">
+      <div class="tg-card rounded-3xl p-8 md:p-10 tg-glow">
+        <div class="grid gap-10 lg:grid-cols-3">
+          <div class="lg:col-span-1">
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">How we deliver</h2>
+            <p class="mt-2 text-slate-300">Fast pilots → clean deployment → reliable support.</p>
+          </div>
+          <div class="lg:col-span-2 grid gap-4">
+            
+            <div class="tg-card rounded-2xl p-5">
+              <div class="flex items-start gap-4">
+                <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center font-extrabold text-white">1</div>
+                <div>
+                  <div class="text-white font-semibold">Discovery & Scope</div>
+                  <div class="text-slate-300 text-sm mt-1">Understand the goal, environment, constraints, and success criteria.</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tg-card rounded-2xl p-5">
+              <div class="flex items-start gap-4">
+                <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center font-extrabold text-white">2</div>
+                <div>
+                  <div class="text-white font-semibold">Design & Simulation</div>
+                  <div class="text-slate-300 text-sm mt-1">Propose architecture, safety, data flow, and ROI assumptions.</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tg-card rounded-2xl p-5">
+              <div class="flex items-start gap-4">
+                <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center font-extrabold text-white">3</div>
+                <div>
+                  <div class="text-white font-semibold">Build & Integrate</div>
+                  <div class="text-slate-300 text-sm mt-1">Hardware, software, and workflows integrated into your site.</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tg-card rounded-2xl p-5">
+              <div class="flex items-start gap-4">
+                <div class="h-10 w-10 rounded-xl bg-white/10 border border-white/10 grid place-items-center font-extrabold text-white">4</div>
+                <div>
+                  <div class="text-white font-semibold">Test, Train, Deploy</div>
+                  <div class="text-slate-300 text-sm mt-1">Commissioning, documentation, and training for your team.</div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
         </div>
       </div>
-      <p class="mt-4 text-sm text-slate-600">Modern engineering & technical solutions — practical delivery, clean execution, reliable support.</p>
-      <div class="mt-4 flex gap-3 text-sm font-semibold">
-        <a class="hover:text-slate-900 text-slate-700" href="mailto:info@tecgin.com">Email</a>
-        <a class="hover:text-slate-900 text-slate-700" href="tel:+971582857468">Call</a>
-        <a class="hover:text-slate-900 text-slate-700" href="https://wa.me/971582857468" target="_blank" rel="noreferrer">WhatsApp</a>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mx-auto max-w-6xl px-5 pb-20">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">FAQ</h2>
+      <div class="mt-6 grid gap-3">
+        
+        <div class="tg-card rounded-2xl p-5">
+          <button data-accordion class="w-full flex items-center justify-between gap-4 text-left" aria-expanded="false">
+            <div class="text-white font-semibold">Can you build a full website like this and still edit easily?</div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-slate-300">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="hidden mt-3 text-slate-300 text-sm leading-relaxed">
+            Yes—this site is plain HTML + Tailwind (CDN). You can edit text, images, and sections directly in the files and redeploy through GitHub + Vercel.
+          </div>
+        </div>
+        
+        <div class="tg-card rounded-2xl p-5">
+          <button data-accordion class="w-full flex items-center justify-between gap-4 text-left" aria-expanded="false">
+            <div class="text-white font-semibold">Will contact form emails work on Vercel?</div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-slate-300">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="hidden mt-3 text-slate-300 text-sm leading-relaxed">
+            Yes—this project includes a serverless API endpoint (<code>/api/contact</code>) that sends email via SMTP. You only need to add SMTP environment variables in Vercel.
+          </div>
+        </div>
+        
+        <div class="tg-card rounded-2xl p-5">
+          <button data-accordion class="w-full flex items-center justify-between gap-4 text-left" aria-expanded="false">
+            <div class="text-white font-semibold">Do you support WhatsApp / click‑to‑call?</div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-slate-300">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="hidden mt-3 text-slate-300 text-sm leading-relaxed">
+            Yes—buttons use <code>tel:</code> and <code>wa.me</code> links so mobile users can call or message instantly.
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="mt-10 tg-card rounded-3xl p-8 tg-glow flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <div class="text-white font-extrabold text-xl">Ready to build something modern?</div>
+          <div class="text-slate-300 mt-1">Tell us what you want to automate or improve—we’ll respond quickly.</div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="contact.html" class="tg-btn inline-flex items-center justify-center rounded-xl bg-white text-slate-900 px-5 py-3 font-semibold">Contact us</a>
+          <a href="tel:+971582857468" class="tg-btn inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 font-semibold">Call now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-slate-950/60">
+  <div class="mx-auto max-w-6xl px-5 py-12 grid gap-10 md:grid-cols-4">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.jpg" alt="Tecgin logo" class="h-11 w-11 rounded-xl object-cover tg-glow">
+        <div>
+          <div class="text-white font-extrabold tracking-tight">TECGIN</div>
+          <div class="text-slate-300 text-sm">Engineering • AI • Robotics</div>
+        </div>
+      </div>
+      <p class="mt-4 text-slate-300 max-w-xl">
+        We design and deploy modern engineering systems—combining automation, AI, and robotics—
+        to make operations faster, safer, and more reliable.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-2">
+        <span class="tg-chip rounded-full px-3 py-1 text-xs text-slate-200">Industrial Automation</span>
+        <span class="tg-chip rounded-full px-3 py-1 text-xs text-slate-200">AI Vision</span>
+        <span class="tg-chip rounded-full px-3 py-1 text-xs text-slate-200">Robotics Integration</span>
+        <span class="tg-chip rounded-full px-3 py-1 text-xs text-slate-200">System Integration</span>
       </div>
     </div>
 
-    <div class="text-sm">
-      <div class="font-extrabold">Quick links</div>
-      <div class="mt-3 grid gap-2 text-slate-700 font-semibold">
-        <a class="hover:text-slate-900" href="about.html">About</a>
-        <a class="hover:text-slate-900" href="services.html">Services</a>
-        <a class="hover:text-slate-900" href="projects.html">Projects</a>
-        <a class="hover:text-slate-900" href="contact.html">Contact</a>
-      </div>
+    <div>
+      <div class="text-white font-semibold">Company</div>
+      <ul class="mt-3 space-y-2 text-slate-300 text-sm">
+        <li><a class="hover:text-white" href="about.html">About</a></li>
+        <li><a class="hover:text-white" href="projects.html">Projects</a></li>
+        <li><a class="hover:text-white" href="services.html">Services</a></li>
+        <li><a class="hover:text-white" href="contact.html">Contact</a></li>
+      </ul>
     </div>
 
-    <div class="text-sm">
-      <div class="font-extrabold">Location</div>
-      <p class="mt-3 text-slate-600">Al Warba Centre, Muraqqabat Deira<br/>Dubai, UAE</p>
-      <p class="mt-3 text-slate-600">Working hours: Mon–Sat 9AM–6PM</p>
+    <div>
+      <div class="text-white font-semibold">Contact</div>
+      <ul class="mt-3 space-y-2 text-slate-300 text-sm">
+        <li><a class="hover:text-white" href="tel:+971582857468">Call: +971 58 285 7468</a></li>
+        <li><a class="hover:text-white" href="mailto:info@tecgin.com">Email: info@tecgin.com</a></li>
+        <li><a class="hover:text-white" href="https://wa.me/971582857468" target="_blank" rel="noreferrer">WhatsApp chat</a></li>
+        <li><span class="text-slate-400">Al Warba Centre, Muraqqabat Deira</span></li>
+      </ul>
     </div>
   </div>
 
-  <div class="border-t border-slate-200">
-    <div class="mx-auto max-w-6xl px-5 py-4 text-xs text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-      <span>© <span id="year"></span> Tecgin. All rights reserved.</span>
-      <span class="text-slate-400">Built on GitHub + Vercel</span>
+  <div class="border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-5 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-400">
+      <div>© <span id="year"></span> Tecgin. All rights reserved.</div>
+      <div class="flex items-center gap-4">
+        <a class="hover:text-white" href="privacy.html" style="display:none">Privacy</a>
+        <a class="hover:text-white" href="contact.html">Request a Quote</a>
+      </div>
     </div>
   </div>
 </footer>
+  <div class="tg-float-wa">
+  <a href="https://wa.me/971582857468" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+      <path d="M20.5 11.7c0 4.8-3.9 8.7-8.7 8.7-1.5 0-3-.4-4.3-1.1L3.5 20.5l1.3-3.8c-.8-1.4-1.2-3-1.2-4.6C3.6 6.9 7.5 3 12.3 3c4.8 0 8.2 3.9 8.2 8.7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M9.3 9.2c.2-.4.4-.4.7-.4h.6c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.5.6c-.1.1-.1.3 0 .5.6 1.1 1.5 1.9 2.6 2.5.2.1.4.1.5 0l.6-.5c.2-.2.4-.2.7-.1l1.7.7c.3.1.4.3.4.5v.6c0 .3 0 .5-.4.7-.4.3-1.3.6-2.2.4-1.4-.3-3.1-1.4-4.3-2.6-1.2-1.2-2.3-3-2.6-4.3-.2-.9.1-1.8.4-2.2Z" fill="currentColor" opacity=".85"/>
+    </svg>
+    <span class="text-slate-200 text-sm font-semibold">WhatsApp</span>
+  </a>
+</div>
 
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>

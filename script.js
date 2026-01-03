@@ -76,3 +76,42 @@
     });
   }
 })();
+
+
+  // Animated counters (elements with data-count="1234")
+  function animateCounters() {
+    const els = document.querySelectorAll("[data-count]");
+    if (!("IntersectionObserver" in window) || !els.length) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        io.unobserve(el);
+        const target = Number(el.getAttribute("data-count") || "0");
+        const suffix = el.getAttribute("data-suffix") || "";
+        const prefix = el.getAttribute("data-prefix") || "";
+        const duration = Math.max(700, Math.min(1800, Number(el.getAttribute("data-duration") || "1200")));
+        const start = performance.now();
+        function tick(t) {
+          const p = Math.min(1, (t - start) / duration);
+          const val = Math.floor(target * (0.15 + 0.85 * (1 - Math.pow(1 - p, 3))));
+          el.textContent = prefix + val.toLocaleString() + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.35 });
+    els.forEach((el) => io.observe(el));
+  }
+  animateCounters();
+
+  // Simple accordion (buttons with data-accordion and a next sibling panel)
+  document.querySelectorAll("[data-accordion]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const panel = btn.nextElementSibling;
+      if (!panel) return;
+      const isOpen = !panel.classList.contains("hidden");
+      panel.classList.toggle("hidden", isOpen);
+      btn.setAttribute("aria-expanded", String(!isOpen));
+    });
+  });

@@ -14,6 +14,7 @@ module.exports = async (req, res) => {
     const name = safe(req.body?.name);
     const email = safe(req.body?.email);
     const phone = safe(req.body?.phone);
+    const topic = safe(req.body?.topic);
     const message = safe(req.body?.message);
     const source = safe(req.body?.source);
 
@@ -36,6 +37,7 @@ module.exports = async (req, res) => {
 
     const subject = `New Tecgin enquiry (${source || "website"}) — ${name}`;
     const text = [
+      `Topic: ${topic || 'N/A'}`,
       `Name: ${name}`,
       `Email: ${email}`,
       phone ? `Phone: ${phone}` : null,

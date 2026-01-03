@@ -1,37 +1,37 @@
-# Tecgin Site (Static + Vercel Email Form)
+# Tecgin Site (Vercel)
+
+Static HTML website (Tailwind CDN) + Vercel Serverless contact form.
 
 ## Pages
-- `index.html`
-- `about.html`
+- `index.html` (Home)
 - `services.html`
 - `projects.html`
+- `about.html`
 - `contact.html`
 
-## Features
-- Modern UI (Tailwind CDN)
-- Click-to-call: `tel:+971582857468`
-- WhatsApp button: `https://wa.me/971582857468`
-- Contact + Quote forms send email via Vercel Serverless Function: `/api/contact`
+## Deploy
+1. Push to GitHub
+2. Import to Vercel
+3. Framework preset: **Other**
+4. Build command: **(leave empty)**
+5. Output directory: **(leave empty)**
 
-## Vercel Environment Variables (Required)
-Set these in **Vercel → Project → Settings → Environment Variables**:
+## Contact form email (required)
+This repo includes `api/contact.js` which sends email via SMTP using **nodemailer**.
 
-- `SMTP_HOST` (example: smtp.gmail.com)
-- `SMTP_PORT` (465 for SSL, or 587 for TLS)
-- `SMTP_USER` (your mailbox username)
-- `SMTP_PASS` (password / app password)
-- `MAIL_TO` (where you want to receive the enquiries)
-- `MAIL_FROM` (must be an address allowed by your SMTP provider, often same as SMTP_USER)
+Add these Environment Variables in Vercel (Project → Settings → Environment Variables):
+- `SMTP_HOST`
+- `SMTP_PORT` (usually 587)
+- `SMTP_USER`
+- `SMTP_PASS`
+- `MAIL_TO` (your receiving email)
+- `MAIL_FROM` (a sender address you own)
 
-### Gmail option (recommended if you use Google Workspace / Gmail)
-Use an **App Password** (not your normal password). SMTP settings:
-- host: `smtp.gmail.com`
-- port: `465`
+Then redeploy.
 
-## Local test
-Just open `index.html` in the browser for UI.
-For email sending you must deploy to Vercel (or run a local server with env vars).
+## WhatsApp + Call
+- WhatsApp button uses `https://wa.me/971582857468`
+- Call button uses `tel:+971582857468`
 
-## Deploy notes
-- No build step needed.
-- Vercel can deploy static + `/api` functions automatically.
+## Edit content
+Open the HTML files and edit text/sections. Images live in `assets/`.
