@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tecgin Engineering | Home</title>
+  <meta name="description" content="Tecgin Engineering – modern engineering solutions, projects, and services." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="badge">Mon – Sat 9AM – 6PM</span>
+        <span class="sep">•</span>
+        <a class="topbar__link" href="tel:+971582857468">+971 58 285 7468</a>
+      </div>
+      <div class="topbar__right">
+        <a class="topbar__link" href="mailto:info@tecgin.com">info@tecgin.com</a>
+        <span class="sep">•</span>
+        <span class="muted">Al Warba Centre, Muraqqabat Deira</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="siteHeader">
+    <div class="container header__inner">
+      <!-- LOGO: replace assets/logo.jpg with your logo file -->
+      <a class="brand" href="#">
+        <img class="brand__logo" src="assets/logo.jpg" alt="Tecgin logo" />
+        <div class="brand__text">
+          <div class="brand__name">TECGIN</div>
+          <div class="brand__tag">Engineering</div>
+        </div>
+      </a>
+
+      <nav class="nav" id="siteNav" aria-label="Primary navigation">
+        <a href="#home" class="nav__link">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="#contact">Contact Now</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobileMenu" id="mobileMenu">
+      <div class="container mobileMenu__inner">
+        <a href="#home" class="mobileMenu__link">Home</a>
+        <a href="#about" class="mobileMenu__link">About</a>
+        <a href="#services" class="mobileMenu__link">Services</a>
+        <a href="#projects" class="mobileMenu__link">Projects</a>
+        <a href="#contact" class="mobileMenu__link">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="kicker">Modern Engineering & Technical Solutions</p>
+          <h1>Build smarter. Automate faster. Deliver stronger.</h1>
+          <p class="lead">
+            Tecgin Engineering provides practical, modern solutions across industrial, commercial, and automation projects —
+            with an engineering-first mindset and clean execution.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#services">Explore Services</a>
+            <a class="btn btn--ghost" href="#projects">View Projects</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <div class="stat__num">Fast</div>
+              <div class="stat__label">Turnaround</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">Modern</div>
+              <div class="stat__label">Design & Delivery</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">Reliable</div>
+              <div class="stat__label">Support</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <div class="card">
+            <h3>Request a Quote</h3>
+            <p class="muted">Tell us what you’re building. We’ll reply quickly.</p>
+
+            <form class="form" onsubmit="return handleQuote(event)">
+              <label>
+                <span>Name</span>
+                <input required name="name" type="text" placeholder="Your name" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input required name="email" type="email" placeholder="you@email.com" />
+              </label>
+              <label>
+                <span>Project</span>
+                <input name="project" type="text" placeholder="Automation / Engineering / Design…" />
+              </label>
+              <button class="btn btn--primary btn--full" type="submit">Send</button>
+              <p class="tiny muted">This demo form shows a success message (no backend yet).</p>
+              <p class="tiny success" id="quoteSuccess" hidden>✅ Thanks! We’ll contact you soon.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container grid2">
+        <div>
+          <h2>About Tecgin</h2>
+          <p class="lead">
+            We combine engineering thinking with modern technology to create solutions that work in real environments.
+          </p>
+          <p>
+            From industrial improvements to smart automation and system integration, we focus on clear outcomes, clean design,
+            and reliable delivery.
+          </p>
+
+          <div class="bullets">
+            <div class="bullet">✔ Practical engineering solutions</div>
+            <div class="bullet">✔ Automation & integration focus</div>
+            <div class="bullet">✔ Clean modern user experience</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Core capabilities</h3>
+          <div class="tags">
+            <span class="tag">Industrial</span>
+            <span class="tag">Commercial</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Integration</span>
+            <span class="tag">Design</span>
+            <span class="tag">Support</span>
+          </div>
+          <div class="divider"></div>
+          <p class="muted">
+            Want this editable like WordPress? We can connect this website to a CMS so you can edit text/images without touching code.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <div class="section__head">
+          <h2>Services</h2>
+          <p class="muted">A modern layout you can reuse for your 5 pages.</p>
+        </div>
+
+        <div class="cards3">
+          <article class="card card--service">
+            <h3>Industrial Engineering</h3>
+            <p class="muted">Process improvement, equipment support, reliability upgrades.</p>
+            <a class="link" href="#contact">Learn more →</a>
+          </article>
+
+          <article class="card card--service">
+            <h3>Automation & Controls</h3>
+            <p class="muted">Sensors, dashboards, workflows, monitoring, and alerts.</p>
+            <a class="link" href="#contact">Learn more →</a>
+          </article>
+
+          <article class="card card--service">
+            <h3>System Integration</h3>
+            <p class="muted">Connect tools, data, devices, and reporting in one flow.</p>
+            <a class="link" href="#contact">Learn more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head">
+          <h2>Featured Projects</h2>
+          <p class="muted">Replace these with your real projects later.</p>
+        </div>
+
+        <div class="projects">
+          <article class="project">
+            <div class="project__thumb"></div>
+            <div class="project__body">
+              <h3>Factory Monitoring Upgrade</h3>
+              <p class="muted">Real-time reporting + alerting for critical operations.</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__thumb"></div>
+            <div class="project__body">
+              <h3>Commercial System Integration</h3>
+              <p class="muted">Unified data + workflows for smoother operations.</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__thumb"></div>
+            <div class="project__body">
+              <h3>Automation Dashboard</h3>
+              <p class="muted">Modern UI dashboard accessible anywhere.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta__inner">
+        <div>
+          <h2>Ready to build something modern?</h2>
+          <p class="muted">We can keep this as a fast custom site, or connect a CMS so you edit easily.</p>
+        </div>
+        <a class="btn btn--primary" href="#contact">Contact Tecgin</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container grid2">
+        <div>
+          <h2>Contact</h2>
+          <p class="lead">Tell us what you need — we’ll reply quickly.</p>
+          <div class="contactList">
+            <div><span class="muted">Email:</span> <a class="link" href="mailto
